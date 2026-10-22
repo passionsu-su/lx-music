@@ -14,8 +14,8 @@ android {
         applicationId = "com.passion.music.tv"
         minSdk = 23
         targetSdk = 37
-        versionCode = 267
-        versionName = "2.9.202610082108"
+        versionCode = 300 + (System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 0)
+        versionName = "3.0." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

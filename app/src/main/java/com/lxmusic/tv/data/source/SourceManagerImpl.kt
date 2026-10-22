@@ -52,6 +52,8 @@ class SourceManagerImpl(
         this.dataStoreManager = dataStoreManager
         // 从Room数据库加载播放源
         loadSourcesFromStorage()
+        // Passion Music：首次启动导入内置音源；新版本内置音源更新时同步脚本内容
+        importBuiltinSourcesIfNeeded()
         // 初始化JavaScript引擎
         initializeJavaScriptEngine()
 
@@ -61,6 +63,54 @@ class SourceManagerImpl(
         if (enabled != null && currentScriptContent == null) {
             val loadResult = loadAndExecuteSource(enabled.id)
             Log.i(TAG, "启动时自动加载播放源: ${enabled.name} -> ${if (loadResult is SourceExecutionResult.Success) "成功" else "失败: ${(loadResult as? SourceExecutionResult.Error)?.message}"}")
+        }
+    }
+
+    /**
+     * Passion Music：内置音源（assets/builtin_sources/index.json + *.js，构建时从 lx-music 仓库拉取最新版）
+     * - 首次启动：全部导入，index.json 中 enable=true 的自动启用（顺序即优先级）
+     * - 之后的新版本：已存在的同名源仅更新脚本内容（保留启用状态）；用户删过的不再加回；新增的内置源追加导入
+     */
+    private fun importBuiltinSourcesIfNeeded() {
+        try {
+            val prefs = context.getSharedPreferences("passion_builtin_sources", Context.MODE_PRIVATE)
+            val indexText = try {
+                context.assets.open("builtin_sources/index.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
+            } catch (e: Exception) { return }
+            val index = org.json.JSONObject(indexText)
+            val version = index.optString("version", "0")
+            if (prefs.getString("version", null) == version) return
+            val known = prefs.getStringSet("known_names", emptySet())?.toMutableSet() ?: mutableSetOf()
+            val firstRun = prefs.getString("version", null) == null
+            val arr = index.optJSONArray("sources") ?: org.json.JSONArray()
+            var imported = 0
+            for (i in 0 until arr.length()) {
+                val item = arr.getJSONObject(i)
+                val file = item.optString("file")
+                val enable = item.optBoolean("enable", false)
+                val script = try {
+                    context.assets.open("builtin_sources/$file").bufferedReader(Charsets.UTF_8).use { it.readText() }
+                } catch (e: Exception) { continue }
+                val parsed = createSourceFromScript(script) ?: continue
+                val existing = sources.find { it.name == parsed.name }
+                if (existing != null) {
+                    if (existing.scriptContent != script) {
+                        updateSource(existing.id) { it.copy(scriptContent = script, version = parsed.version, description = parsed.description) }
+                    }
+                } else if (firstRun || parsed.name !in known) {
+                    addSource(parsed)
+                    imported++
+                    if (enable) {
+                        sources.find { it.name == parsed.name }?.let { setSourceEnabled(it.id, true) }
+                        Thread.sleep(2) // 保证 enabledAt 递增，维持优先级顺序
+                    }
+                }
+                known.add(parsed.name)
+            }
+            prefs.edit().putString("version", version).putStringSet("known_names", known).apply()
+            Log.i(TAG, "内置音源处理完成: 版本 $version, 新导入 $imported 个")
+        } catch (e: kotlin.coroutines.cancellation.CancellationException) { throw e } catch (e: Exception) {
+            Log.e(TAG, "内置音源导入失败: ${e.message}", e)
         }
     }
 

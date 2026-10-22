@@ -25,6 +25,7 @@ import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -319,11 +320,21 @@ fun ServerStatusCard(
                 }
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "在手机或电脑浏览器中打开上述地址，即可上传和管理播放源",
+                    text = "手机扫码或在浏览器中打开上述地址，即可一键导入推荐音源、上传和管理播放源",
                     fontSize = 12.sp,
                     // 2.5 浅色主题：深卡片上的次级文字（白70%）
                     color = LXOnCardDarkSecondary
                 )
+                // Passion Music：扫码打开 Web 管理页（一键导入音源）
+                val pmQr = remember(serverUrl) { pmGenerateQr(serverUrl, 260) }
+                if (pmQr != null) {
+                    Spacer(modifier = Modifier.height(10.dp))
+                    androidx.compose.foundation.Image(
+                        bitmap = pmQr,
+                        contentDescription = "扫码导入音源",
+                        modifier = Modifier.size(150.dp).clip(RoundedCornerShape(8.dp))
+                    )
+                }
             }
         }
     }
@@ -718,4 +729,22 @@ fun DeleteConfirmDialog(
         titleContentColor = LXTextPrimary,
         textContentColor = LXTextPrimary
     )
+}
+
+
+/** Passion Music：生成二维码（zxing core，本地编码） */
+private fun pmGenerateQr(content: String, size: Int): androidx.compose.ui.graphics.ImageBitmap? {
+    return try {
+        val hints = mapOf(com.google.zxing.EncodeHintType.MARGIN to 1)
+        val matrix = com.google.zxing.qrcode.QRCodeWriter()
+            .encode(content, com.google.zxing.BarcodeFormat.QR_CODE, size, size, hints)
+        val pixels = IntArray(size * size)
+        for (y in 0 until size) for (x in 0 until size) {
+            pixels[y * size + x] = if (matrix.get(x, y)) android.graphics.Color.BLACK else android.graphics.Color.WHITE
+        }
+        val bmp = android.graphics.Bitmap.createBitmap(pixels, size, size, android.graphics.Bitmap.Config.RGB_565)
+        bmp.asImageBitmap()
+    } catch (e: Exception) {
+        null
+    }
 }

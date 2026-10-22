@@ -107,6 +107,8 @@ class HttpServer(
             // 注意：NanoHTTPD 的 session.parms 只含 query string，POST form body 需要 parseBody 解析，
             // 因此以下两个 handler 直接接收 session，在内部解析参数
             uri == "/api/sources/delete" && method == Method.POST -> handleSourceDelete(session)
+            uri == "/api/sources/import-url" && method == Method.POST -> handleImportUrl(session)
+            uri == "/api/sources/recommended" -> handleRecommended()
             uri == "/api/sources/enable" && method == Method.POST -> handleSourceEnable(session)
             uri == "/api/sources/platforms" && method == Method.GET -> handleGetSourcePlatforms(params)
             uri == "/api/sources/platforms" && method == Method.POST -> handleSetSourcePlatforms(session)
@@ -273,6 +275,17 @@ class HttpServer(
                         <div>
                             <span id="source-count">0</span> 个播放源
                         </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 style="margin-bottom: 12px;">一键导入音源</h2>
+                        <p style="color: #888; margin-bottom: 12px; font-size: 0.9em;">推荐列表来自 passionsu-su/lx-music（每周自动检测更新），点「导入」由电视直接下载。</p>
+                        <div style="display:flex;gap:8px;margin-bottom:14px;">
+                            <input id="pm-url" type="text" placeholder="粘贴音源 JS 链接…" style="flex:1;padding:10px;border-radius:8px;border:1px solid #444;background:#111;color:#fff;">
+                            <button onclick="pmImport(document.getElementById('pm-url').value)" style="padding:10px 16px;border:0;border-radius:8px;background:#e04848;color:#fff;">导入</button>
+                        </div>
+                        <div id="pm-msg" style="font-size:0.9em;margin-bottom:10px;"></div>
+                        <div id="pm-list" style="color:#888;">正在加载推荐音源…</div>
                     </div>
 
                     <div class="card">
@@ -548,6 +561,41 @@ class HttpServer(
                     });
 
                     // ===== 添加收藏歌单 =====
+                    async function pmImport(url) {
+                        var msg = document.getElementById('pm-msg');
+                        url = (url || '').trim();
+                        if (!url) { msg.textContent = '请输入链接'; return; }
+                        msg.style.color = '#aaa'; msg.textContent = '电视正在下载并导入…';
+                        try {
+                            var r = await fetch('/api/sources/import-url', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: 'url=' + encodeURIComponent(url) });
+                            var res = await r.json();
+                            msg.style.color = res.success ? '#4ade80' : '#f87171';
+                            msg.textContent = (res.success ? '✓ ' : '✗ ') + res.message;
+                            if (res.success && typeof loadSources === 'function') loadSources();
+                        } catch (e) { msg.style.color = '#f87171'; msg.textContent = '✗ 导入失败: ' + e.message; }
+                    }
+                    async function pmLoadRecommended() {
+                        var box = document.getElementById('pm-list');
+                        try {
+                            var r = await fetch('/api/sources/recommended');
+                            var d = await r.json();
+                            var list = d.sources || [];
+                            if (!list.length) { box.textContent = '暂无推荐音源'; return; }
+                            box.innerHTML = '';
+                            list.forEach(function (s) {
+                                var row = document.createElement('div');
+                                row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #333;';
+                                var t = document.createElement('div');
+                                t.innerHTML = '<div style="color:#fff">' + escapeAttr(s.name) + '</div><div style="font-size:0.8em;color:#888">' + escapeAttr(s.version || '') + (s.ok === false ? ' · 最近检测失效' : '') + '</div>';
+                                var b = document.createElement('button');
+                                b.textContent = '导入';
+                                b.style.cssText = 'padding:6px 14px;border:0;border-radius:8px;background:#2563eb;color:#fff;';
+                                b.onclick = function () { pmImport(s.url); };
+                                row.appendChild(t); row.appendChild(b); box.appendChild(row);
+                            });
+                        } catch (e) { box.textContent = '推荐列表加载失败：' + e.message; }
+                    }
+                    pmLoadRecommended();
                     async function addPlaylist() {
                         var input = document.getElementById('playlist-url');
                         var result = document.getElementById('playlist-result');
@@ -914,6 +962,87 @@ class HttpServer(
                 "text/plain; charset=utf-8",
                 "导出日志失败: ${e.message}"
             )
+        }
+    }
+
+    /** Passion Music：下载文本（跟随重定向） */
+    private fun pmFetchText(url: String): String {
+        var current = url
+        repeat(5) {
+            val conn = java.net.URL(current).openConnection() as java.net.HttpURLConnection
+            conn.connectTimeout = 15000; conn.readTimeout = 20000
+            conn.instanceFollowRedirects = true
+            conn.setRequestProperty("User-Agent", "PassionMusicTV/1.0")
+            val code = conn.responseCode
+            if (code in 300..399) { current = conn.getHeaderField("Location") ?: throw IOException("重定向无地址"); conn.disconnect(); return@repeat }
+            if (code != 200) { conn.disconnect(); throw IOException("HTTP $code") }
+            return conn.inputStream.bufferedReader(Charsets.UTF_8).use { it.readText() }
+        }
+        throw IOException("重定向次数过多")
+    }
+
+    private fun pmFetchWithMirrors(url: String): String {
+        val candidates = mutableListOf(url)
+        if (url.startsWith("https://raw.githubusercontent.com/")) {
+            candidates.add("https://ghproxy.net/$url")
+            val m = Regex("^https://raw\\.githubusercontent\\.com/([^/]+)/([^/]+)/([^/]+)/(.+)$").find(url)
+            if (m != null) {
+                val (o, r, b, path) = m.destructured
+                candidates.add("https://cdn.jsdelivr.net/gh/$o/$r@$b/$path")
+            }
+        }
+        var last: Exception? = null
+        for (c in candidates) {
+            try { return pmFetchText(c) } catch (e: Exception) { last = e; Log.w(TAG, "下载失败 $c: ${e.message}") }
+        }
+        throw last ?: IOException("下载失败")
+    }
+
+    /** Passion Music：电视端按链接下载并导入音源 */
+    private fun handleImportUrl(session: IHTTPSession): Response {
+        return try {
+            val url = parsePostParams(session)["url"]?.trim().orEmpty()
+            if (!url.startsWith("http")) return createErrorResponse("链接无效")
+            val scriptContent = pmFetchWithMirrors(url)
+            when (val parseResult = scriptParser.parse(scriptContent)) {
+                is com.lxmusic.tv.data.source.ParseResult.Success -> {
+                    val source = MusicSource(
+                        id = UUID.randomUUID().toString(),
+                        name = parseResult.metadata.name,
+                        description = parseResult.metadata.description,
+                        version = parseResult.metadata.version,
+                        author = parseResult.metadata.author,
+                        homepage = parseResult.metadata.homepage,
+                        scriptContent = scriptContent
+                    )
+                    sourceManager?.addSource(source)
+                    createSuccessResponse("播放源 '${source.name}' 导入成功，请在电视上启用")
+                }
+                is com.lxmusic.tv.data.source.ParseResult.Error -> createErrorResponse(parseResult.message)
+            }
+        } catch (e: Exception) {
+            createErrorResponse("导入失败: ${e.message}")
+        }
+    }
+
+    /** Passion Music：推荐音源列表（线上 sources.json，失败时回退到内置列表） */
+    private fun handleRecommended(): Response {
+        val urls = listOf(
+            "https://passionsu-su.github.io/lx-music/sources.json",
+            "https://cdn.jsdelivr.net/gh/passionsu-su/lx-music@main/sources.json",
+            "https://ghproxy.net/https://raw.githubusercontent.com/passionsu-su/lx-music/main/sources.json"
+        )
+        for (u in urls) {
+            try {
+                val text = pmFetchText(u)
+                if (text.trim().startsWith("{")) return newFixedLengthResponse(Response.Status.OK, "application/json", text)
+            } catch (e: Exception) { Log.w(TAG, "推荐列表获取失败 $u: ${e.message}") }
+        }
+        return try {
+            val text = context.assets.open("builtin_sources/index.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
+            newFixedLengthResponse(Response.Status.OK, "application/json", text)
+        } catch (e: Exception) {
+            newFixedLengthResponse(Response.Status.OK, "application/json", "{\"sources\":[]}")
         }
     }
 
