@@ -1,8 +1,10 @@
 # 🎵 洛雪音乐（LX Music）客户端 & 音源合集
 
-> 整理于 2026-10-22。所有链接均来自各项目 GitHub Releases，音源链接已逐个验证可访问（HTTP 200）。
+> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-10-22）。
 >
-> 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/ （或直接打开仓库内 `index.html`）
+> 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/
+>
+> 📺 **Passion Music TV**：内置音源、手机扫码一键导入，见下表「自建」行。
 
 ## 一、客户端下载
 
@@ -25,7 +27,7 @@
 | LX Music Enhanced（玻璃拟态 UI） | 魔改 | Windows | [v2.13.1](https://github.com/caocam666-del/lx-music-enhanced/releases/tag/v2.13.1) | 2026-10-18 | [Win x64 安装版](https://github.com/caocam666-del/lx-music-enhanced/releases/download/v2.13.1/lx-music-desktop-v2.13.1-x64-Setup.exe)<br>[Win x64 便携版](https://github.com/caocam666-del/lx-music-enhanced/releases/download/v2.13.1/lx-music-desktop-v2.13.1-x64-portable.exe) | [GitHub](https://github.com/caocam666-del/lx-music-enhanced) |
 | LX-Music-TAchanged | 魔改 | Windows | [v2.1](https://github.com/Tabris-Ayanami/LX-Music-TAchanged/releases/tag/v2.1) | 2026-09-05 | [Win x64 安装版](https://github.com/Tabris-Ayanami/LX-Music-TAchanged/releases/download/v2.1/LX-TA-v2.1.0-x64-Setup.exe) | [GitHub](https://github.com/Tabris-Ayanami/LX-Music-TAchanged) |
 | lx-music-desktop-amll（Apple Music 风歌词） | 魔改 | Windows | [v0.0.1](https://github.com/xiaozhang-ohhhh/lx-music-desktop-amll/releases/tag/v0.0.1) | 2026-06-19 | [zip](https://github.com/xiaozhang-ohhhh/lx-music-desktop-amll/releases/download/v0.0.1/lx-music-desktop.zip) | [GitHub](https://github.com/xiaozhang-ohhhh/lx-music-desktop-amll) |
-| Passion Music（Android TV，自建） | 自建 | Android TV | [v2.9.202610082108](https://github.com/passionsu-su/lx-music/releases/tag/passion-music-tv-v2.9.202610082108) | 2026-10-23 | [TV APK arm64-v8a](https://github.com/passionsu-su/lx-music/releases/download/passion-music-tv-v2.9.202610082108/PassionMusic-TV-v2.9.202610082108-arm64-v8a.apk) | [源码分支](https://github.com/passionsu-su/lx-music/tree/passion-music-tv) |
+| Passion Music（Android TV，自建） | 自建 | Android TV | [v2.9.202610082108](https://github.com/passionsu-su/lx-music/releases/tag/passion-music-tv-v2.9.202610082108) | 2026-10-23 | [TV APK arm64-v8a](https://github.com/passionsu-su/lx-music/releases/download/passion-music-tv-v2.9.202610082108/PassionMusic-TV-v2.9.202610082108-arm64-v8a.apk) | [GitHub](https://github.com/passionsu-su/lx-music/tree/passion-music-tv) |
 | LX Music TV（Android TV） | 魔改 | Android TV | [源码](https://github.com/bmizhou/lx-music-tv) | - | [仓库（需自行构建）](https://github.com/bmizhou/lx-music-tv) | [GitHub](https://github.com/bmizhou/lx-music-tv) |
 
 > 🇨🇳 国内下载慢：在任意下载链接前加 `https://ghproxy.net/` 加速。
@@ -36,20 +38,20 @@
 
 使用方法：洛雪音乐 → 设置 → 自定义源 → 在线导入 → 粘贴下方链接。
 
-| 音源名称 | 标识 | 版本 | 原始链接 | 加速链接（国内） |
-|---|---|---|---|---|
-| 六音音源 | `sixyin` | v1.2.1 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js` |
-| Huibq | `huibq` | v1.2.0 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js` |
-| 野花🌷 (Flower) | `flower` | 1 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js` |
-| 野草🌾 (Grass) | `grass` | 1 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` |
-| 野草🌾 (tenmeng) | `yecao202412` | 1 | `https://tt.tenmeng.com/moonue/js/yecao202412.js` | - |
-| ikun音源 | `ikun` | v22 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` |
-| 独家音源 (LX) | `lx` | 6 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` |
-| 长青SVIP音源 | `changqing` | 1.3.0 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` |
-| 幻音音源 | `huanyin` | v3 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` |
-| 聚合API接口 (CF) | `juhe` | 3 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` |
-| 全豆要 [聚合音源] | `qdy` | 9.3 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` |
-| 星海音乐源 | `xinghai` | v3.2.15 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` |
+| 音源名称 | 标识 | 版本 | 状态 | 原始链接 | 加速链接（国内） |
+|---|---|---|---|---|---|
+| 六音音源 | `sixyin` | v1.2.1 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js` |
+| Huibq | `huibq` | v1.2.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js` |
+| 野花🌷 (Flower) | `flower` | 1 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js` |
+| 野草🌾 (Grass) | `grass` | 1 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` |
+| 野草🌾 (tenmeng) | `yecao202412` | 1 | ✅ 可用 | `https://tt.tenmeng.com/moonue/js/yecao202412.js` | - |
+| ikun音源 | `ikun` | v22 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` |
+| 独家音源 (LX) | `lx` | 6 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` |
+| 长青SVIP音源 | `changqing` | 1.3.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` |
+| 幻音音源 | `huanyin` | v3 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` |
+| 聚合API接口 (CF) | `juhe` | 3 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` |
+| 全豆要 [聚合音源] | `qdy` | 9.3 93特供版 DeepSeek优化 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` |
+| 星海音乐源 | `xinghai` | v3.2.15 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` |
 
 ## 三、相关资源
 
