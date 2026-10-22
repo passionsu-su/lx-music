@@ -1,1 +1,60 @@
-# lx-music
+# 🎵 洛雪音乐（LX Music）客户端 & 音源合集
+
+> 整理于 2026-10-22。所有链接均来自各项目 GitHub Releases，音源链接已逐个验证可访问（HTTP 200）。
+>
+> 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/ （或直接打开仓库内 `index.html`）
+
+## 一、客户端下载
+
+| 名称 | 类型 | 平台 | 最新版本 | 发布日期 | 下载 | 项目主页 |
+|---|---|---|---|---|---|---|
+| LX Music 桌面版（官方） | 官方 | Windows / macOS / Linux | [v2.12.6](https://github.com/lyswhut/lx-music-desktop/releases/tag/v2.12.6) | 2026-09-19 | [Win x64 安装版](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-v2.12.6-x64-Setup.exe)<br>[Win x64 绿色版](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-v2.12.6-win_x64-green.7z)<br>[Win7 x64 安装版](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-v2.12.6-win7_x64-Setup.exe)<br>[Win ARM64](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-v2.12.6-arm64-Setup.exe)<br>[macOS Apple 芯片](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-2.12.6-arm64.dmg)<br>[macOS Intel](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-2.12.6-x64.dmg)<br>[Linux AppImage](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop_2.12.6_x64.AppImage)<br>[Linux deb amd64](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop_2.12.6_amd64.deb)<br>[Linux deb arm64](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop_2.12.6_arm64.deb)<br>[Linux rpm](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop-2.12.6.x64.rpm)<br>[Arch pacman](https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.6/lx-music-desktop_2.12.6_x64.pacman) | [GitHub](https://github.com/lyswhut/lx-music-desktop) |
+| LX Music 移动版（官方） | 官方 | Android | [v1.9.1](https://github.com/lyswhut/lx-music-mobile/releases/tag/v1.9.1) | 2026-09-19 | [通用版 universal](https://github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-universal.apk)<br>[arm64-v8a](https://github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-arm64-v8a.apk)<br>[armeabi-v7a](https://github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-armeabi-v7a.apk)<br>[x86_64](https://github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-x86_64.apk) | [GitHub](https://github.com/lyswhut/lx-music-mobile) |
+| lx-netease-music-mobile（网易云增强） | 魔改 | Android | [v1.8.85-test.95.1](https://github.com/souvenp/lx-netease-music-mobile/releases/tag/v1.8.85-test.95.1) | 2026-09-01 | [通用版 universal](https://github.com/souvenp/lx-netease-music-mobile/releases/download/v1.8.85-test.95.1/lx-netease-music-mobile-v1.8.85-universal.apk)<br>[arm64-v8a](https://github.com/souvenp/lx-netease-music-mobile/releases/download/v1.8.85-test.95.1/lx-netease-music-mobile-v1.8.85-arm64-v8a.apk) | [GitHub](https://github.com/souvenp/lx-netease-music-mobile) |
+| lx-netease-music-desktop（网易云增强） | 魔改 | Windows / macOS / Linux | [v3.0.2](https://github.com/souvenp/lx-netease-music-desktop/releases/tag/v3.0.2) | 2026-06-06 | [Win x64 安装版](https://github.com/souvenp/lx-netease-music-desktop/releases/download/v3.0.2/lx-music-desktop-netease-v3.0.2-x64-Setup.exe)<br>[Win x64 绿色版](https://github.com/souvenp/lx-netease-music-desktop/releases/download/v3.0.2/lx-music-desktop-netease-v3.0.2-win_x64-green.7z)<br>[macOS Apple 芯片](https://github.com/souvenp/lx-netease-music-desktop/releases/download/v3.0.2/lx-music-desktop-netease-3.0.2-arm64.dmg)<br>[macOS Intel](https://github.com/souvenp/lx-netease-music-desktop/releases/download/v3.0.2/lx-music-desktop-netease-3.0.2-x64.dmg)<br>[Linux AppImage](https://github.com/souvenp/lx-netease-music-desktop/releases/download/v3.0.2/lx-music-desktop-netease_3.0.2_x64.AppImage)<br>[Linux deb amd64](https://github.com/souvenp/lx-netease-music-desktop/releases/download/v3.0.2/lx-music-desktop-netease_3.0.2_amd64.deb) | [GitHub](https://github.com/souvenp/lx-netease-music-desktop) |
+| LXWalnut Music（核桃版） | 魔改 | Android | [v26.09.28](https://github.com/WalnutBai/lx-lxwalnut-music-mobile/releases/tag/v26.09.28) | 2026-09-28 | [通用版 universal](https://github.com/WalnutBai/lx-lxwalnut-music-mobile/releases/download/v26.09.28/lx-lxwalnut-music-mobile-v26.09.28-universal.apk)<br>[arm64-v8a](https://github.com/WalnutBai/lx-lxwalnut-music-mobile/releases/download/v26.09.28/lx-lxwalnut-music-mobile-v26.09.28-arm64-v8a.APK) | [GitHub](https://github.com/WalnutBai/lx-lxwalnut-music-mobile) |
+| LX Music Mod | 魔改 | Android | [v1.8.4](https://github.com/carlito12345/LX-Music-Mod/releases/tag/v1.8.4) | 2026-07-23 | [通用版 universal](https://github.com/carlito12345/LX-Music-Mod/releases/download/v1.8.4/lx-music-mobile-v1.8.4-universal.apk) | [GitHub](https://github.com/carlito12345/LX-Music-Mod) |
+| LX-Y Music iOS | 魔改 | iOS（未签名 IPA，需自签） | [滚动构建](https://github.com/1970905901/LX-Y-Music-IOS/releases) | 2026-09-29 | [Releases / TG 群获取](https://github.com/1970905901/LX-Y-Music-IOS/releases) | [GitHub](https://github.com/1970905901/LX-Y-Music-IOS) |
+| lx-music-mobile iOS 构建（fansa92） | 魔改 | iOS（未签名 IPA，需自签） | [v1.9.1](https://github.com/fansa92/lx-music-mobile/releases/tag/v1.9.1) | 2026-10-09 | [iOS IPA](https://github.com/fansa92/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-ios-unsigned.ipa) | [GitHub](https://github.com/fansa92/lx-music-mobile) |
+| iMusic（原生 iOS，液态玻璃 UI） | 魔改 | iOS（未签名 IPA，需自签） | [v1.0](https://github.com/DreamDZL/iMusic/releases/tag/v1.0) | 2026-10-05 | [iOS IPA](https://github.com/DreamDZL/iMusic/releases/download/v1.0/iMusic-unsigned.ipa) | [GitHub](https://github.com/DreamDZL/iMusic) |
+| LX Music Flutter Mobile | 魔改 | Android / iOS / macOS | [1.0.0](https://github.com/yingjunda/LX-Music-Flutter-Mobile/releases/tag/1.0.0) | 2026-06-23 | [Android APK](https://github.com/yingjunda/LX-Music-Flutter-Mobile/releases/download/1.0.0/app-release.apk)<br>[iOS IPA](https://github.com/yingjunda/LX-Music-Flutter-Mobile/releases/download/1.0.0/lx_music_flutter.ipa)<br>[macOS zip](https://github.com/yingjunda/LX-Music-Flutter-Mobile/releases/download/1.0.0/lx_music_flutter.mac.zip) | [GitHub](https://github.com/yingjunda/LX-Music-Flutter-Mobile) |
+| LX Music Desktop Enhanced | 魔改 | Windows / macOS / Linux | [v3.2.6-beta.2](https://github.com/xinzhihong-ship-it/lx-music-desktop-enhanced/releases/tag/v3.2.6-beta.2) | 2026-10-06 | [Win x64 安装版](https://github.com/xinzhihong-ship-it/lx-music-desktop-enhanced/releases/download/v3.2.6-beta.2/lx-music-desktop-v3.2.6-beta.2-x64-Setup.exe)<br>[macOS Apple 芯片](https://github.com/xinzhihong-ship-it/lx-music-desktop-enhanced/releases/download/v3.2.6-beta.2/lx-music-desktop-3.2.6-beta.2-arm64.dmg)<br>[macOS Intel](https://github.com/xinzhihong-ship-it/lx-music-desktop-enhanced/releases/download/v3.2.6-beta.2/lx-music-desktop-3.2.6-beta.2-x64.dmg)<br>[Linux AppImage](https://github.com/xinzhihong-ship-it/lx-music-desktop-enhanced/releases/download/v3.2.6-beta.2/lx-music-desktop_3.2.6-beta.2_x64.AppImage) | [GitHub](https://github.com/xinzhihong-ship-it/lx-music-desktop-enhanced) |
+| LX Music Enhanced（玻璃拟态 UI） | 魔改 | Windows | [v2.13.1](https://github.com/caocam666-del/lx-music-enhanced/releases/tag/v2.13.1) | 2026-10-18 | [Win x64 安装版](https://github.com/caocam666-del/lx-music-enhanced/releases/download/v2.13.1/lx-music-desktop-v2.13.1-x64-Setup.exe)<br>[Win x64 便携版](https://github.com/caocam666-del/lx-music-enhanced/releases/download/v2.13.1/lx-music-desktop-v2.13.1-x64-portable.exe) | [GitHub](https://github.com/caocam666-del/lx-music-enhanced) |
+| LX-Music-TAchanged | 魔改 | Windows | [v2.1](https://github.com/Tabris-Ayanami/LX-Music-TAchanged/releases/tag/v2.1) | 2026-09-05 | [Win x64 安装版](https://github.com/Tabris-Ayanami/LX-Music-TAchanged/releases/download/v2.1/LX-TA-v2.1.0-x64-Setup.exe) | [GitHub](https://github.com/Tabris-Ayanami/LX-Music-TAchanged) |
+| lx-music-desktop-amll（Apple Music 风歌词） | 魔改 | Windows | [v0.0.1](https://github.com/xiaozhang-ohhhh/lx-music-desktop-amll/releases/tag/v0.0.1) | 2026-06-19 | [zip](https://github.com/xiaozhang-ohhhh/lx-music-desktop-amll/releases/download/v0.0.1/lx-music-desktop.zip) | [GitHub](https://github.com/xiaozhang-ohhhh/lx-music-desktop-amll) |
+| LX Music TV（Android TV） | 魔改 | Android TV | [源码](https://github.com/bmizhou/lx-music-tv) | - | [仓库（需自行构建）](https://github.com/bmizhou/lx-music-tv) | [GitHub](https://github.com/bmizhou/lx-music-tv) |
+
+> 🇨🇳 国内下载慢：在任意下载链接前加 `https://ghproxy.net/` 加速。
+>
+> 🍎 iOS 版均为**未签名 IPA**，需用 AltStore / SideStore / 巨魔(TrollStore) / 爱思助手等自签安装。官方暂无 iOS 版。
+
+## 二、音源接口
+
+使用方法：洛雪音乐 → 设置 → 自定义源 → 在线导入 → 粘贴下方链接。
+
+| 音源名称 | 标识 | 版本 | 原始链接 | 加速链接（国内） |
+|---|---|---|---|---|
+| 六音音源 | `sixyin` | v1.2.1 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js` |
+| Huibq | `huibq` | v1.2.0 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js` |
+| 野花🌷 (Flower) | `flower` | 1 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js` |
+| 野草🌾 (Grass) | `grass` | 1 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` |
+| 野草🌾 (tenmeng) | `yecao202412` | 1 | `https://tt.tenmeng.com/moonue/js/yecao202412.js` | - |
+| ikun音源 | `ikun` | v22 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` |
+| 独家音源 (LX) | `lx` | 6 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` |
+| 长青SVIP音源 | `changqing` | 1.3.0 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` |
+| 幻音音源 | `huanyin` | v3 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` |
+| 聚合API接口 (CF) | `juhe` | 3 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` |
+| 全豆要 [聚合音源] | `qdy` | 9.3 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` |
+| 星海音乐源 | `xinghai` | v3.2.15 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` |
+
+## 三、相关资源
+
+- [洛雪音乐官方文档](https://lxmusic.toside.cn/)
+- [pdone/lx-music-source（音源合集，每日健康检测）](https://github.com/pdone/lx-music-source)
+- [Macrohard0001/lx-ikun-music-sources（音源与安装包收集）](https://github.com/Macrohard0001/lx-ikun-music-sources)
+- [lx-music-sync-server（数据同步服务）](https://github.com/lyswhut/lx-music-sync-server)
+- [lx-music-api-server（Python 解析接口服务器）](https://github.com/MeoProject/lx-music-api-server)
+
+## 免责声明
+
+本仓库仅做链接整理，不存储任何音频或程序文件。音源来自网络，可用性随时变化，请支持正版音乐。魔改版为第三方作品，请自行甄别安全性。
