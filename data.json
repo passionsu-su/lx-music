@@ -412,14 +412,18 @@
    "name": "Passion Music（Android TV，自建）",
    "type": "自建",
    "platform": "Android TV",
-   "version": "v3.0.3",
+   "version": "v3.0.4",
    "date": "2026-10-23",
    "repo": "https://github.com/passionsu-su/lx-music/tree/passion-music-tv",
-   "release": "https://github.com/passionsu-su/lx-music/releases/tag/passion-music-tv-v3.0.3",
+   "release": "https://github.com/passionsu-su/lx-music/releases/tag/passion-music-tv-v3.0.4",
    "files": [
     [
-     "APK (arm64)",
-     "https://github.com/passionsu-su/lx-music/releases/download/passion-music-tv-v3.0.3/PassionMusic-TV-v3.0.3-arm64-v8a.apk"
+     "APK (arm64-v8a)",
+     "https://github.com/passionsu-su/lx-music/releases/download/passion-music-tv-v3.0.4/PassionMusic-TV-v3.0.4-arm64-v8a.apk"
+    ],
+    [
+     "APK (armeabi-v7a)",
+     "https://github.com/passionsu-su/lx-music/releases/download/passion-music-tv-v3.0.4/PassionMusic-TV-v3.0.4-armeabi-v7a.apk"
     ]
    ]
   },
