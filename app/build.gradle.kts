@@ -38,7 +38,7 @@ android {
             signingConfig = signingConfigs.getByName("passion")
             ndk {
                 abiFilters.clear()
-                abiFilters.add("arm64-v8a")
+                abiFilters.add((project.findProperty("targetAbi") as String?) ?: "arm64-v8a")
             }
 
             optimization {
