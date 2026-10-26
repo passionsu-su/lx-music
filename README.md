@@ -1,6 +1,6 @@
 # 🎵 洛雪音乐（LX Music）客户端 & 音源合集
 
-> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-10-22）。
+> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-10-26）。
 >
 > 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/
 >
