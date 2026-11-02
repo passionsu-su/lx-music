@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-11-02",
  "sources": [
   {
    "name": "六音音源",
@@ -7,7 +7,7 @@
    "version": "v1.2.1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": true
   },
   {
@@ -16,7 +16,7 @@
    "version": "v1.2.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": true
   },
   {
@@ -25,7 +25,7 @@
    "version": "1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": true
   },
   {
@@ -34,7 +34,7 @@
    "version": "1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -43,7 +43,7 @@
    "version": "1",
    "url": "https://tt.tenmeng.com/moonue/js/yecao202412.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -52,16 +52,16 @@
    "version": "v22",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": true
   },
   {
    "name": "独家音源 (LX)",
    "key": "lx",
-   "version": "6",
+   "version": "7",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -70,7 +70,7 @@
    "version": "1.3.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -79,7 +79,7 @@
    "version": "v3",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -88,7 +88,7 @@
    "version": "3",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -97,7 +97,7 @@
    "version": "9.3 93特供版 DeepSeek优化",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
    "tv_enable": false
   },
   {
@@ -106,7 +106,52 @@
    "version": "v3.2.15",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js",
    "ok": true,
-   "checked": "2026-10-26",
+   "checked": "2026-11-02",
+   "tv_enable": false
+  },
+  {
+   "name": "fish_music",
+   "key": "fish",
+   "version": "1.9.0",
+   "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/fish/latest.js",
+   "ok": true,
+   "checked": "2026-11-02",
+   "tv_enable": false
+  },
+  {
+   "name": "𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ",
+   "key": "helloworld",
+   "version": "260925",
+   "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/helloworld/latest.js",
+   "ok": true,
+   "checked": "2026-11-02",
+   "tv_enable": false
+  },
+  {
+   "name": "HYWmusic_公益版",
+   "key": "hyw",
+   "version": "v1.2.0",
+   "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/hyw/latest.js",
+   "ok": true,
+   "checked": "2026-11-02",
+   "tv_enable": false
+  },
+  {
+   "name": "杰翔聚合音源",
+   "key": "jiexiang",
+   "version": "2.3.0",
+   "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/jiexiang/latest.js",
+   "ok": true,
+   "checked": "2026-11-02",
+   "tv_enable": false
+  },
+  {
+   "name": "lx-玉宁熙-Pro",
+   "key": "yuningxi",
+   "version": "v1.2.2",
+   "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js",
+   "ok": true,
+   "checked": "2026-11-02",
    "tv_enable": false
   }
  ]
