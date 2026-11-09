@@ -1,6 +1,6 @@
 # 🎵 洛雪音乐（LX Music）客户端 & 音源合集
 
-> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-11-02）。
+> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-11-09）。
 >
 > 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/
 >
@@ -51,12 +51,16 @@
 | 幻音音源 | `huanyin` | v3 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` |
 | 聚合API接口 (CF) | `juhe` | 3 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` |
 | 全豆要 [聚合音源] | `qdy` | 9.3 93特供版 DeepSeek优化 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js` |
-| 星海音乐源 | `xinghai` | v3.2.15 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` |
+| 星海音乐源 | `xinghai` | v3.2.18 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js` |
 | fish_music | `fish` | 1.9.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/fish/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/fish/latest.js` |
 | 𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ | `helloworld` | 260925 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/helloworld/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/helloworld/latest.js` |
 | HYWmusic_公益版 | `hyw` | v1.2.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/hyw/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/hyw/latest.js` |
 | 杰翔聚合音源 | `jiexiang` | 2.3.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/jiexiang/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/jiexiang/latest.js` |
-| lx-玉宁熙-Pro | `yuningxi` | v1.2.2 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js` |
+| lx-玉宁熙-Pro | `yuningxi` | v1.2.5 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js` |
+| 非常刀 | `feichangdao` | v5 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/feichangdao/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/feichangdao/latest.js` |
+| 轻量音源（四平台多源并行） | `qingliang` | 2.1.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/qingliang/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/qingliang/latest.js` |
+| 溯音音源 | `suyin` | v1 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/suyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/suyin/latest.js` |
+| 星澜聚合音源 (StellarWave) | `xinglan` | v4.0.2 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js` |
 
 ## 三、相关资源
 
