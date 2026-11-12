@@ -30,7 +30,7 @@ a{color:var(--acc2)}
 </style></head><body><div class="wrap">
 <h1>🎵 洛雪音乐 · 客户端 & 音源</h1>
 <p class="lead">点按钮即可复制音源链接，粘贴到「设置 → 自定义源 → 在线导入」。音源每周自动检测，最近检测 2026-11-09 · <a href="https://github.com/passionsu-su/lx-music">GitHub 仓库</a></p>
-<div class="tabs"><button class="tab on" data-v="src">音源接口</button><button class="tab" data-v="cli">客户端下载</button></div>
+<div class="tabs"><button class="tab on" data-v="src">音源接口</button><button class="tab" data-v="cli">客户端下载</button><button class="tab" data-v="atv">📺 Apple TV</button></div>
 <div id="src">
  <div class="bar"><input type="search" id="q" placeholder="搜索音源…">
  <label><input type="checkbox" id="px"> 使用国内加速链接 (ghproxy)</label>
@@ -42,6 +42,10 @@ a{color:var(--acc2)}
  <label><input type="checkbox" id="px2"> 下载走 ghproxy 加速</label></div>
  <div class="grid" id="clist"></div>
  <p class="hint">iOS 版均为未签名 IPA，需用 AltStore / SideStore / TrollStore 等自签安装；官方暂无 iOS 版。魔改版为第三方作品，请自行甄别。</p>
+</div>
+<div id="atv" style="display:none">
+ <p class="hint" style="margin-top:0">Apple TV 直播源每周自动检测。完整的播放器 / 浏览器 / B 站 / 音乐推荐见 <a href="https://github.com/passionsu-su/lx-music/tree/main/appletv">Apple TV 专区</a>。</p>
+ <div class="grid" id="alist"></div>
 </div>
 <p class="hint">本页仅整理链接，不存储任何文件。音源来自网络，可用性随时变化，请支持正版音乐。</p>
 </div><div class="toast" id="t">已复制</div>
@@ -59,6 +63,7 @@ function rc(){const q=$('#q2').value.trim().toLowerCase();const px=$('#px2').che
 document.addEventListener('click',e=>{const b=e.target.closest('[data-u]');if(b)copy(su(b.dataset.u))});
 $('#all').onclick=()=>copy(D.sources.filter(s=>s.ok).map(s=>su(s.url)).join('\n'),'已复制全部可用音源 '+D.sources.filter(s=>s.ok).length+' 条');
 ['#q','#px'].forEach(s=>$(s).addEventListener('input',rs));['#q2','#px2'].forEach(s=>$(s).addEventListener('input',rc));
-document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x==t));$('#src').style.display=t.dataset.v=='src'?'':'none';$('#cli').style.display=t.dataset.v=='cli'?'':'none'});
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x==t));['src','cli','atv'].forEach(v=>$('#'+v).style.display=t.dataset.v==v?'':'none')});
+const A=[{"name": "⭐ 本仓库合并「已测可用」列表", "url": "https://passionsu-su.github.io/lx-music/appletv/iptv-tested.m3u", "alive": 333, "channels": 333, "ipv6": false, "checked": "2026-11-12", "note": "央视/卫视/港澳台分组 · 已带 EPG · "}, {"key": "vbskycn-v4", "name": "vbskycn/iptv（IPv4，自动更新）", "url": "https://live.zbds.top/tv/iptv4.m3u", "alt": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 431, "alive": 131, "checked": "2026-11-12"}, {"key": "guovin", "name": "Guovin/iptv-api 测速结果", "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 1619, "alive": 134, "checked": "2026-11-12"}, {"key": "suxuang-v4", "name": "suxuang/myIPTV（IPv4）", "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 1225, "alive": 101, "checked": "2026-11-12"}, {"key": "aptv", "name": "APTV 官方示例源（Kimentanm/aptv）", "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 120, "alive": 44, "checked": "2026-11-12"}, {"key": "chinaiptv", "name": "hujingguang/ChinaIPTV（自动更新）", "url": "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/cnTV_AutoUpdate.m3u8", "ipv6": false, "merge": true, "reachable": true, "channels": 46, "alive": 25, "checked": "2026-11-12"}, {"key": "iptvorg-zho", "name": "iptv-org 中文频道（全球公开源）", "url": "https://iptv-org.github.io/iptv/languages/zho.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 228, "alive": 62, "checked": "2026-11-12"}, {"key": "iptvorg-tw", "name": "iptv-org 台湾", "url": "https://iptv-org.github.io/iptv/countries/tw.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 34, "alive": 10, "checked": "2026-11-12"}, {"key": "iptvorg-hk", "name": "iptv-org 香港", "url": "https://iptv-org.github.io/iptv/countries/hk.m3u", "ipv6": false, "merge": true, "reachable": true, "channels": 18, "alive": 1, "checked": "2026-11-12"}, {"key": "fmml-v6", "name": "范明明 fanmingming/live（IPv6，画质好）", "url": "https://live.fanmingming.cn/tv/m3u/ipv6.m3u", "alt": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u", "ipv6": true, "merge": false, "reachable": true, "channels": 82, "alive": 14, "checked": "2026-11-12"}, {"key": "suxuang-v6", "name": "suxuang/myIPTV（IPv6）", "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u", "ipv6": true, "merge": false, "reachable": true, "channels": 862, "alive": 40, "checked": "2026-11-12"}, {"key": "freetv", "name": "Free-TV/IPTV（全球免费频道，英文为主）", "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8", "ipv6": false, "merge": false, "reachable": true, "channels": 2197, "alive": 1192, "checked": "2026-11-12"}];$('#alist').innerHTML=A.map(p=>`<div class="card"><div class="row"><div><div class="name">${esc(p.name)}<span class="tag ${p.alive>0||p.ipv6?'t1':'t2'}">${p.ipv6?'IPv6':'可播 '+p.alive+'/'+p.channels}</span></div><div class="meta">${p.note||''}检测于 ${p.checked||'-'}</div></div><button class="btn" data-u="${esc(p.url)}">复制地址</button></div><div class="url">${esc(p.url)}</div></div>`).join('');
 rs();rc();
 </script></body></html>

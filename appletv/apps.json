@@ -1,0 +1,30 @@
+{
+ "iptv": [
+  {"name":"Fjord IPTV Player","price":"免费，无内购无广告","fmt":"M3U / M3U8 / Xtream","note":"完全免费里体验最完整：直播+EPG+点播海报墙，mpv 内核；tvOS 17+","cn":"✅","url":"https://apps.apple.com/app/id6788160093"},
+  {"name":"Bro IPTV Player","price":"免费，开源 MIT","fmt":"M3U / M3U8 / EPG","note":"开源、无广告无账号，支持 PIN 锁播放列表，界面有简体中文","cn":"✅","url":"https://apps.apple.com/us/app/bro-iptv-player/id6762360135","src":"https://github.com/mikehouse/Apple-TV-Player"},
+  {"name":"APTV","price":"免费下载 + 内购","fmt":"M3U / EPG / 回看","note":"国人开发、中文最友好，频道实时预览、iCloud 同步；免费版有功能限制","cn":"✅","url":"https://apps.apple.com/cn/app/aptv/id1630403500","src":"https://github.com/Kimentanm/aptv"},
+  {"name":"SenPlayer","price":"免费下载 + 内购","fmt":"M3U / M3U8 / TXT 订阅","note":"IPTV + 网盘 + Emby/Jellyfin 一体，支持 TXT 格式直播源","cn":"✅","url":"https://apps.apple.com/us/app/senplayer-media-player/id6443975850"},
+  {"name":"VLC","price":"免费，开源","fmt":"单条流 / m3u 文件","note":"没有频道列表和 EPG，适合临时测试某条地址能不能播","cn":"✅","url":"https://apps.apple.com/us/app/vlc-media-player/id650377962"},
+  {"name":"UHF","price":"免费基础版 + PRO","fmt":"M3U8 / Xtream / Plex / Jellyfin","note":"界面最像原生 Apple 风格；国区未上架，需外区 Apple ID","cn":"❌ 外区","url":"https://apps.apple.com/us/app/uhf-love-your-iptv/id6443751726"},
+  {"name":"IPTVX","price":"免费下载 + 内购","fmt":"M3U / Xtream / Plex / SMB","note":"影视化界面、多画面，完整功能需付费","cn":"✅","url":"https://apps.apple.com/us/app/iptvx/id1451470024"},
+  {"name":"Revue","price":"试用 7 天，买断 $9.99","fmt":"M3U / HLS / TS / RTSP","note":"专为运营商 IPTV 组播（udpxy / rtp2httpd）优化，需 tvOS 26","cn":"✅","url":"https://apps.apple.com/us/app/revue-iptv-stream-player/id6816327004"},
+  {"name":"iPlayTV","price":"买断 ¥38 / $5.99","fmt":"M3U / Xtream / EPG","note":"老牌 Apple TV 专用播放器，网格节目单","cn":"✅","url":"https://apps.apple.com/us/app/iplaytv-iptv-m3u-player/id1072226801"}
+ ],
+ "browser": [
+  {"name":"糖葫芦浏览器","price":"免费 TestFlight","note":"原生 tvOS 浏览器，遥控器光标/滚动/触摸/拖拽四种模式，可看 B 站、YouTube、腾讯视频网页；爱奇艺等 MSE 视频无法播放","url":"https://testflight.apple.com/join/WpRhUUyp","src":"https://github.com/never88gone/HSBTVBrowser"},
+  {"name":"糖葫芦浏览工具（同作者备用通道）","price":"免费 TestFlight","note":"主通道满员时用这个","url":"https://testflight.apple.com/join/QWne6G6V","src":"https://github.com/never88gone/HSBTVBrowser"},
+  {"name":"tvOSBrowser","price":"免费开源","note":"WKWebView + 标签页，用私有 API，需 Mac + Xcode 自行编译安装","url":"https://github.com/jvanakker/tvOSBrowser","src":"https://github.com/jvanakker/tvOSBrowser"}
+ ],
+ "bilibili": [
+  {"name":"ATV-Bilibili-demo","price":"免费开源","note":"最成熟：扫码登录、弹幕、直播、4K/HDR、云视听投屏。作者声明无官方 TF，用 nightly 未签名 IPA + Sideloadly / atvloadly 自签","url":"https://github.com/yichengchen/ATV-Bilibili-demo/releases/tag/nightly","src":"https://github.com/yichengchen/ATV-Bilibili-demo"},
+  {"name":"Danmu TV","price":"免费开源","note":"新项目，杜比视界/弹幕/手机投屏，需 Xcode 自行编译","url":"https://github.com/CurryFishBalls9527/DanmuTV/releases","src":"https://github.com/CurryFishBalls9527/DanmuTV"},
+  {"name":"Miao Project","price":"App Store 付费（港区 HK$48）","note":"功能最全：杜比视界/全景声、点赞投币、多账户；不想自签就买它","url":"https://github.com/kanezeng/MiaoProject","src":"https://github.com/kanezeng/MiaoProject"},
+  {"name":"MiniBili","price":"免费 TestFlight","note":"tvOS 版仍在开发，目前只有 iPhone/iPad/Mac/Watch，可先在 iPad 上用再 AirPlay","url":"https://testflight.apple.com/join/TgcHSGwb","src":"https://minibili.zhaohe.org/"}
+ ],
+ "music": [
+  {"name":"Vibefy（网易云 tvOS）","price":"免费 TestFlight，开源","note":"网易云扫码登录、每日推荐、歌单、云盘、滚动歌词，Apple TV 上最接近洛雪的体验","url":"https://testflight.apple.com/join/zJWvzxAK","src":"https://github.com/ZhangDo/NeteaseTVDemo"},
+  {"name":"Primuse","price":"App Store 免费","note":"NAS / Navidrome / Jellyfin / 网盘 / 网络电台一体，tvOS 原生","url":"https://apps.apple.com/us/app/primuse-self-hosted-music/id6761675450"},
+  {"name":"Shelv Player","price":"App Store 免费，开源 GPL-3.0","note":"Navidrome / Subsonic 客户端，iCloud 同步，tvOS 18.6+","url":"https://apps.apple.com/us/app/id6762255865","src":"https://github.com/gatzenga/Shelv"},
+  {"name":"Spotify","price":"免费（含广告）","note":"Apple TV 上唯一有免费档的大厂流媒体，需外区账号","url":"https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580"}
+ ]
+}

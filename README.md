@@ -5,6 +5,8 @@
 > 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/
 >
 > 📺 **Passion Music TV**：内置音源、手机扫码一键导入，见下表「自建」行。
+>
+> 🍎 **Apple TV 专区**：IPTV 播放器、每周检测的直播源、TestFlight 浏览器、B 站客户端、免费音乐 App → [appletv/](appletv/README.md)
 
 ## 一、客户端下载
 
@@ -62,7 +64,14 @@
 | 溯音音源 | `suyin` | v1 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/suyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/suyin/latest.js` |
 | 星澜聚合音源 (StellarWave) | `xinglan` | v4.0.2 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js` |
 
-## 三、相关资源
+## 三、Apple TV 专区
+
+IPTV 播放器（免费优先）、每周自动检测的直播源与合并好的可用列表、TestFlight 浏览器、第三方 B 站客户端、免费音乐 App：👉 **[appletv/README.md](appletv/README.md)**
+
+- 合并可用直播源（填进 APTV / Fjord / SenPlayer 等）：`https://passionsu-su.github.io/lx-music/appletv/iptv-tested.m3u`
+- EPG 节目单：`https://live.fanmingming.cn/e.xml`
+
+## 四、相关资源
 
 - [洛雪音乐官方文档](https://lxmusic.toside.cn/)
 - [pdone/lx-music-source（音源合集，每日健康检测）](https://github.com/pdone/lx-music-source)
