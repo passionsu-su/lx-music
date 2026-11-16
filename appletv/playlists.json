@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-16",
  "epg": [
   {
    "name": "范明明 EPG（央视/卫视全）",
@@ -19,9 +19,9 @@
    "ipv6": false,
    "merge": true,
    "reachable": true,
-   "channels": 431,
-   "alive": 131,
-   "checked": "2026-11-12"
+   "channels": 450,
+   "alive": 412,
+   "checked": "2026-11-16"
   },
   {
    "key": "guovin",
@@ -31,8 +31,8 @@
    "merge": true,
    "reachable": true,
    "channels": 1619,
-   "alive": 134,
-   "checked": "2026-11-12"
+   "alive": 599,
+   "checked": "2026-11-16"
   },
   {
    "key": "suxuang-v4",
@@ -42,8 +42,8 @@
    "merge": true,
    "reachable": true,
    "channels": 1225,
-   "alive": 101,
-   "checked": "2026-11-12"
+   "alive": 348,
+   "checked": "2026-11-16"
   },
   {
    "key": "aptv",
@@ -54,7 +54,7 @@
    "reachable": true,
    "channels": 120,
    "alive": 44,
-   "checked": "2026-11-12"
+   "checked": "2026-11-16"
   },
   {
    "key": "chinaiptv",
@@ -63,9 +63,9 @@
    "ipv6": false,
    "merge": true,
    "reachable": true,
-   "channels": 46,
-   "alive": 25,
-   "checked": "2026-11-12"
+   "channels": 50,
+   "alive": 32,
+   "checked": "2026-11-16"
   },
   {
    "key": "iptvorg-zho",
@@ -75,8 +75,8 @@
    "merge": true,
    "reachable": true,
    "channels": 228,
-   "alive": 62,
-   "checked": "2026-11-12"
+   "alive": 105,
+   "checked": "2026-11-16"
   },
   {
    "key": "iptvorg-tw",
@@ -86,8 +86,8 @@
    "merge": true,
    "reachable": true,
    "channels": 34,
-   "alive": 10,
-   "checked": "2026-11-12"
+   "alive": 17,
+   "checked": "2026-11-16"
   },
   {
    "key": "iptvorg-hk",
@@ -97,8 +97,8 @@
    "merge": true,
    "reachable": true,
    "channels": 18,
-   "alive": 1,
-   "checked": "2026-11-12"
+   "alive": 3,
+   "checked": "2026-11-16"
   },
   {
    "key": "fmml-v6",
@@ -110,7 +110,7 @@
    "reachable": true,
    "channels": 82,
    "alive": 14,
-   "checked": "2026-11-12"
+   "checked": "2026-11-16"
   },
   {
    "key": "suxuang-v6",
@@ -120,8 +120,8 @@
    "merge": false,
    "reachable": true,
    "channels": 862,
-   "alive": 40,
-   "checked": "2026-11-12"
+   "alive": 64,
+   "checked": "2026-11-16"
   },
   {
    "key": "freetv",
@@ -131,18 +131,18 @@
    "merge": false,
    "reachable": true,
    "channels": 2197,
-   "alive": 1192,
-   "checked": "2026-11-12"
+   "alive": 1534,
+   "checked": "2026-11-16"
   }
  ],
- "merged_count": 333,
+ "merged_count": 1105,
  "merged_by_cat": {
-  "央视": 24,
-  "卫视": 24,
-  "港澳台": 43,
-  "影视": 27,
-  "体育": 7,
+  "央视": 110,
+  "卫视": 171,
+  "港澳台": 121,
+  "影视": 182,
+  "体育": 15,
   "春晚": 38,
-  "地方/其他": 170
+  "地方/其他": 468
  }
 }

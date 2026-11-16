@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-16",
  "sources": [
   {
    "name": "六音音源",
@@ -7,7 +7,7 @@
    "version": "v1.2.1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": true
   },
   {
@@ -16,7 +16,7 @@
    "version": "v1.2.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": true
   },
   {
@@ -25,7 +25,7 @@
    "version": "1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": true
   },
   {
@@ -34,7 +34,7 @@
    "version": "1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -43,7 +43,7 @@
    "version": "1",
    "url": "https://tt.tenmeng.com/moonue/js/yecao202412.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -52,7 +52,7 @@
    "version": "v22",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": true
   },
   {
@@ -61,7 +61,7 @@
    "version": "7",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -70,7 +70,7 @@
    "version": "1.3.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -79,7 +79,7 @@
    "version": "v3",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -88,7 +88,7 @@
    "version": "3",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -97,7 +97,7 @@
    "version": "9.3 93特供版 DeepSeek优化",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -106,7 +106,7 @@
    "version": "v3.2.18",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinghai/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -115,7 +115,7 @@
    "version": "1.9.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/fish/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -124,7 +124,7 @@
    "version": "260925",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/helloworld/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -133,7 +133,7 @@
    "version": "v1.2.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/hyw/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -142,7 +142,7 @@
    "version": "2.3.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/jiexiang/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -151,7 +151,7 @@
    "version": "v1.2.5",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/yuningxi/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -160,7 +160,7 @@
    "version": "v5",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/feichangdao/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -169,7 +169,7 @@
    "version": "2.1.0",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/qingliang/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -178,7 +178,7 @@
    "version": "v1",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/suyin/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   },
   {
@@ -187,7 +187,7 @@
    "version": "v4.0.2",
    "url": "https://raw.githubusercontent.com/pdone/lx-music-source/main/xinglan/latest.js",
    "ok": true,
-   "checked": "2026-11-09",
+   "checked": "2026-11-16",
    "tv_enable": false
   }
  ]
