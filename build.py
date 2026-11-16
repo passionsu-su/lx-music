@@ -32,7 +32,7 @@ a{color:var(--acc2)}
 </style></head><body><div class="wrap">
 <h1>🎵 洛雪音乐 · 客户端 & 音源</h1>
 <p class="lead">点按钮即可复制音源链接，粘贴到「设置 → 自定义源 → 在线导入」。音源每周自动检测，最近检测 __UPDATED__ · <a href="https://github.com/passionsu-su/lx-music">GitHub 仓库</a></p>
-<div class="tabs"><button class="tab on" data-v="src">音源接口</button><button class="tab" data-v="cli">客户端下载</button><button class="tab" data-v="atv">📺 Apple TV</button></div>
+<div class="tabs"><button class="tab on" data-v="src">音源接口</button><button class="tab" data-v="cli">客户端下载</button></div>
 <div id="src">
  <div class="bar"><input type="search" id="q" placeholder="搜索音源…">
  <label><input type="checkbox" id="px"> 使用国内加速链接 (ghproxy)</label>
@@ -44,10 +44,6 @@ a{color:var(--acc2)}
  <label><input type="checkbox" id="px2"> 下载走 ghproxy 加速</label></div>
  <div class="grid" id="clist"></div>
  <p class="hint">iOS 版均为未签名 IPA，需用 AltStore / SideStore / TrollStore 等自签安装；官方暂无 iOS 版。魔改版为第三方作品，请自行甄别。</p>
-</div>
-<div id="atv" style="display:none">
- <p class="hint" style="margin-top:0">Apple TV 直播源每周自动检测。完整的播放器 / 浏览器 / B 站 / 音乐推荐见 <a href="https://github.com/passionsu-su/lx-music/tree/main/appletv">Apple TV 专区</a>。</p>
- <div class="grid" id="alist"></div>
 </div>
 <p class="hint">本页仅整理链接，不存储任何文件。音源来自网络，可用性随时变化，请支持正版音乐。</p>
 </div><div class="toast" id="t">已复制</div>
@@ -65,19 +61,14 @@ function rc(){const q=$('#q2').value.trim().toLowerCase();const px=$('#px2').che
 document.addEventListener('click',e=>{const b=e.target.closest('[data-u]');if(b)copy(su(b.dataset.u))});
 $('#all').onclick=()=>copy(D.sources.filter(s=>s.ok).map(s=>su(s.url)).join('\n'),'已复制全部可用音源 '+D.sources.filter(s=>s.ok).length+' 条');
 ['#q','#px'].forEach(s=>$(s).addEventListener('input',rs));['#q2','#px2'].forEach(s=>$(s).addEventListener('input',rc));
-document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x==t));['src','cli','atv'].forEach(v=>$('#'+v).style.display=t.dataset.v==v?'':'none')});
-const A=__ATV__;$('#alist').innerHTML=A.map(p=>`<div class="card"><div class="row"><div><div class="name">${esc(p.name)}<span class="tag ${p.alive>0||p.ipv6?'t1':'t2'}">${p.ipv6?'IPv6':'可播 '+p.alive+'/'+p.channels}</span></div><div class="meta">${p.note||''}检测于 ${p.checked||'-'}</div></div><button class="btn" data-u="${esc(p.url)}">复制地址</button></div><div class="url">${esc(p.url)}</div></div>`).join('');
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x==t));['src','cli'].forEach(v=>$('#'+v).style.display=t.dataset.v==v?'':'none')});
 rs();rc();
 </script></body></html>'''
-import os
-A=json.load(open('appletv/playlists.json',encoding='utf-8')) if os.path.exists('appletv/playlists.json') else {'playlists':[],'updated':''}
-_m='https://passionsu-su.github.io/lx-music/appletv/iptv-tested.m3u'
-_atv=[{'name':'⭐ 本仓库合并「已测可用」列表','url':_m,'alive':A.get('merged_count',0),'channels':A.get('merged_count',0),'ipv6':False,'checked':A.get('updated'),'note':'央视/卫视/港澳台分组 · 已带 EPG · '}]+A['playlists']
-open('index.html','w').write(html.replace('__ATV__',json.dumps(_atv,ensure_ascii=False)).replace('__DATA__',json.dumps(d,ensure_ascii=False)).replace('__UPDATED__',d['updated']))
+open('index.html','w').write(html.replace('__DATA__',json.dumps(d,ensure_ascii=False)).replace('__UPDATED__',d['updated']))
 
 P="https://ghproxy.net/"
 L=["# 🎵 洛雪音乐（LX Music）客户端 & 音源合集\n",
-f"> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：{d['updated']}）。\n>\n> 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/\n>\n> 📺 **Passion Music TV**：内置音源、手机扫码一键导入，见下表「自建」行。\n>\n> 🍎 **Apple TV 专区**：IPTV 播放器、每周检测的直播源、TestFlight 浏览器、B 站客户端、免费音乐 App → [appletv/](appletv/README.md)\n",
+f"> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：{d['updated']}）。\n>\n> 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/\n>\n> 📺 **Passion Music TV**：内置音源、手机扫码一键导入，见下表「自建」行。\n>\n> 🍎 **Apple TV 专区**已迁移到 [TVbox 仓库](https://github.com/passionsu-su/TVbox/tree/main/appletv)\n",
 "## 一、客户端下载\n","| 名称 | 类型 | 平台 | 最新版本 | 发布日期 | 下载 | 项目主页 |","|---|---|---|---|---|---|---|"]
 for c in d['clients']:
     dl="<br>".join(f"[{n}]({u})" for n,u in c['files'])
@@ -88,10 +79,7 @@ L+=["\n> 🇨🇳 国内下载慢：在任意下载链接前加 `https://ghproxy
 for s_ in d['sources']:
     u=s_['url']; px=f"`{P+u}`" if 'raw.githubusercontent' in u else '-'
     L.append(f"| {s_['name']} | `{s_['key']}` | {s_['version'] or '-'} | {'✅ 可用' if s_['ok'] else '❌ 失效'} | `{u}` | {px} |")
-L+=["\n## 三、Apple TV 专区\n","IPTV 播放器（免费优先）、每周自动检测的直播源与合并好的可用列表、TestFlight 浏览器、第三方 B 站客户端、免费音乐 App：👉 **[appletv/README.md](appletv/README.md)**",
-"\n- 合并可用直播源（填进 APTV / Fjord / SenPlayer 等）：`https://passionsu-su.github.io/lx-music/appletv/iptv-tested.m3u`",
-"- EPG 节目单：`https://live.fanmingming.cn/e.xml`"]
-L+=["\n## 四、相关资源\n",
+L+=["\n## 三、相关资源\n",
 "- [洛雪音乐官方文档](https://lxmusic.toside.cn/)",
 "- [pdone/lx-music-source（音源合集，每日健康检测）](https://github.com/pdone/lx-music-source)",
 "- [Macrohard0001/lx-ikun-music-sources（音源与安装包收集）](https://github.com/Macrohard0001/lx-ikun-music-sources)",
@@ -101,5 +89,3 @@ L+=["\n## 四、相关资源\n",
 open('README.md','w').write("\n".join(L))
 json.dump({"updated":d['updated'],"sources":d['sources']},open('sources.json','w'),ensure_ascii=False,indent=1)
 
-if os.path.exists('appletv/apps.json'):
-    exec(open('build_appletv.py',encoding='utf-8').read())
