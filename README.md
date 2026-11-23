@@ -1,6 +1,6 @@
 # 🎵 洛雪音乐（LX Music）客户端 & 音源合集
 
-> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-11-16）。
+> 客户端链接来自各项目 GitHub Releases；音源每周一由 GitHub Actions 自动检测并更新（最近检测：2026-11-23）。
 >
 > 🌐 **一键复制网页**：https://passionsu-su.github.io/lx-music/
 >
@@ -48,7 +48,7 @@
 | 野草🌾 (Grass) | `grass` | 1 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js` |
 | 野草🌾 (tenmeng) | `yecao202412` | 1 | ✅ 可用 | `https://tt.tenmeng.com/moonue/js/yecao202412.js` | - |
 | ikun音源 | `ikun` | v22 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js` |
-| 独家音源 (LX) | `lx` | 7 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` |
+| 独家音源 (LX) | `lx` | 7 | ❌ 失效 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js` |
 | 长青SVIP音源 | `changqing` | 1.3.0 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/changqing/latest.js` |
 | 幻音音源 | `huanyin` | v3 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huanyin/latest.js` |
 | 聚合API接口 (CF) | `juhe` | 3 | ✅ 可用 | `https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` | `https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js` |
